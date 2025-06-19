@@ -15,7 +15,7 @@ This script provides a GUI for controlling an ASCOM-compatible telescope mount v
 
 ## Installation
 1. Install the required Python packages:
-   ```bash
+```bash
 pip install pywin32 watchdog requests
 ```
 2. Download and install the ASCOM Platform from the official website.
