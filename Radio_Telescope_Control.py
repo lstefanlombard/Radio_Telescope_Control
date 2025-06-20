@@ -10,7 +10,7 @@ import sys, traceback, time, re, os, csv ,requests
 
 global My_Mount
 My_Mount="ASCOM.OnStep.Telescope" # Change for your mount
-IF_Avarage_Path= r'C:\Users\Desktop\IF_avarage' # Change this to the path that if avarage outputs the data to
+IF_Avarage_Path= r'C:\Users\lstef\OneDrive\Desktop\Radiotelescope' # Change this to the path that if avarage outputs the data to
 
 #############
 
@@ -103,15 +103,6 @@ def wait_for_setteling(): #setteling time animation instead of just a normal tim
     for i in range(SettelTime):
         print(f"\rSetteling{'.' * (i % 4)}", end="\n")
         time.sleep(0.3)
-        root.update()
-def Scan_Time_Wait(total): # scan time animation instead of just a normal time.sleep
-    for i in range(total + 1):
-        percent = int((i / total) * 100)
-        bar = '#' * (percent // 5)  # Each '#' represents 5%
-        sys.stdout.write(f'\rProgress: [{bar:<20}] {percent}%\n')
-        sys.stdout.flush()
-        log_message(" Recording data")
-        time.sleep(total/20)
         root.update()
 # Show Save As dialog when
 # Global variable
@@ -219,7 +210,6 @@ def Start_Scan():
         log_message(" Settling Complete")
         print("settelingcomplete")
         root.update()
-        #Scan_Time_Wait(total)
         wait_for_files()
         log_message(" Recording Complete")
         root.update()
