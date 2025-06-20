@@ -30,7 +30,7 @@ pip install pywin32 watchdog requests
 
 2. Run the script:
    ```bash
-   python telescope_control.py
+   python Radio_Telescope_Control.py
    ```
 3. Use the GUI to set coordinates, scan sizes, and start the scan.
 
